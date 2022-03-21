@@ -1,5 +1,3 @@
-package ru.mirea.task2;
-
 import java.time.LocalDate;
 
 public class Human

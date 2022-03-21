@@ -1,5 +1,3 @@
-package ru.mirea.task3;
-
 public class NodeKV <K, V>
 {
     private K key;

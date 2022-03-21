@@ -1,5 +1,3 @@
-package ru.mirea.task1;
-
 import java.util.ArrayList;
 
 @FunctionalInterface

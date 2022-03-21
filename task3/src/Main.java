@@ -1,5 +1,3 @@
-package ru.mirea.task3;
-
 // Variant 8
 // List с использованием Semaphore, Map с использованием ключевого слова synchronized.
 
