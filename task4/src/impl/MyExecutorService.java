@@ -1,3 +1,5 @@
+package impl;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -6,9 +8,15 @@ import java.util.concurrent.*;
 public class MyExecutorService implements ExecutorService {
 
     private int nThreads;
+    List<Thread> listThreads;
 
-    MyExecutorService (int nThreads) {
+    public MyExecutorService (int nThreads) {
         this.nThreads = nThreads;
+
+        this.listThreads = new ArrayList<>(nThreads);
+        for (int i = 0; i < this.nThreads; i++) {
+            this.listThreads.add(new Thread());
+        }
     }
 
     @Override
@@ -55,19 +63,47 @@ public class MyExecutorService implements ExecutorService {
     @Override
     public <T> List<Future<T>> invokeAll(Collection<? extends Callable<T>> tasks) throws InterruptedException {
         List<Future<T>> results = new ArrayList<>();
+        boolean started = false;
 
         for (Callable<T> task : tasks) {
             try {
                 FutureTask<T> future = new FutureTask<>(task);
                 results.add(future);
-                Thread thread = new Thread(future);
-                thread.start();
-                while (!future.isDone())
-                    Thread.sleep(1);
+
+                Thread thread;
+
+                started = false;
+                while (!started) {
+                    for (int i = 0; i < this.nThreads; i++) {
+                        thread = this.listThreads.get(i);
+                        if (thread.getState() == Thread.State.RUNNABLE) {
+                            continue;
+                        } else {
+                            thread = new Thread(future);
+                            this.listThreads.set(i, thread);
+                            thread.start();
+                            started = true;
+
+                            break;
+                        }
+                    }
+                }
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
+
+        boolean allCompleted = false;
+        while (!allCompleted) {
+            allCompleted = true;
+            for (Future<T> future : results) {
+                if (!future.isDone()) {
+                    allCompleted = false;
+                    break;
+                }
+            }
+        }
+
         return results;
     }
 
