@@ -1,0 +1,28 @@
+plugins {
+    id 'org.springframework.boot' version '2.6.7'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group = 'ru.mirea'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter:2.6.7'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+processResources {
+    filesMatching('application.yml') {
+        expand(project.properties)
+    }
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
