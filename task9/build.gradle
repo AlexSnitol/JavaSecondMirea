@@ -1,0 +1,66 @@
+plugins {
+    id 'java'
+    id "com.palantir.docker" version "0.22.1"
+    id "com.palantir.docker-run" version "0.22.1"
+}
+
+group 'main'
+version '0.1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+}
+
+jar {
+    manifest {
+        attributes "Main-Class": "main.Main"
+    }
+
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+docker {
+    name "myjavaapp:${project.version}"
+    dockerfile file("docker/Dockerfile")
+    files "docker/program.jar"
+    buildArgs([JAR_FILE: "program.jar"])
+}
+
+dockerRun {
+    name "myjavaapp"
+    image "myjavaapp:${project.version}"
+    clean true
+    daemonize false
+}
+
+task createJar(type: Jar) {
+    manifest {
+        attributes 'Main-Class': 'main.Main'
+    }
+    baseName = 'program'
+    configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    with jar
+}
+
+task copyJar(type: Copy) {
+    //dependsOn   'jar'
+    from        "build/libs/program-${project.version}.jar"
+    into        'docker'
+    rename { String fileName ->
+        fileName.replace("-${project.version}", "")
+    }
+}
+
+task deployJarIntoDocker {
+    dependsOn 'build'
+    dependsOn << createJar
+    dependsOn << copyJar
+    dependsOn 'docker'
+    dependsOn 'dockerRun'
+}
+
