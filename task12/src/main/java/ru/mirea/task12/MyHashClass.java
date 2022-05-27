@@ -51,6 +51,8 @@ public class MyHashClass {
         } catch (IOException e) {
             err.println(e);
         }
+        File f = new File(fileToHashPath);
+        f.delete();
     }
 
 }

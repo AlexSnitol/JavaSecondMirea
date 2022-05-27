@@ -1,0 +1,376 @@
+914  [background-preinit] INFO  o.h.validator.internal.util.Version
+                – HV000001: Hibernate Validator 6.2.3.Final
+912  [main] INFO  c.example.demo21.Task21Application
+                – Starting Task21Application using Java 11.0.2 on DESKTOP-9LAEEI3 with PID 10828 (C:\Users\sslot\IdeaProjects\JavaSecondMirea\task21\target\classes started by sslot in C:\Users\sslot\IdeaProjects\JavaSecondMirea\task21)
+916  [main] INFO  c.example.demo21.Task21Application
+                – No active profile set, falling back to 1 default profile: "default"
+1661 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+1706 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                – Finished Spring Data repository scanning in 37 ms. Found 2 JPA repository interfaces.
+2387 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                – Tomcat initialized with port(s): 8080 (http)
+2393 [main] INFO  o.a.coyote.http11.Http11NioProtocol
+                – Initializing ProtocolHandler ["http-nio-8080"]
+2393 [main] INFO  o.a.catalina.core.StandardService
+                – Starting service [Tomcat]
+2393 [main] INFO  o.a.catalina.core.StandardEngine
+                – Starting Servlet engine: [Apache Tomcat/9.0.60]
+2498 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+                – Initializing Spring embedded WebApplicationContext
+2498 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext
+                – Root WebApplicationContext: initialization completed in 1531 ms
+2645 [main] INFO  com.zaxxer.hikari.HikariDataSource
+                – HikariPool-1 - Starting...
+3722 [main] ERROR com.zaxxer.hikari.pool.HikariPool
+                – HikariPool-1 - Exception during pool initialization.
+org.postgresql.util.PSQLException: �����: ������������ "postgres" �� ������ �������� ����������� (�� ������)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:646)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:180)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:400)
+	at org.postgresql.Driver.connect(Driver.java:259)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:159)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:117)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:52)
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:90)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:145)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:107)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applySchemaScripts(AbstractScriptDatabaseInitializer.java:97)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:75)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:65)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at com.example.demo21.Task21Application.main(Task21Application.java:10)
+3725 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext
+                – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.jdbc.datasource.init.UncategorizedScriptException: Failed to execute database script; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is org.postgresql.util.PSQLException: �����: ������������ "postgres" �� ������ �������� ����������� (�� ������)
+3728 [main] INFO  o.a.catalina.core.StandardService
+                – Stopping service [Tomcat]
+3742 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener
+                – 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+3759 [main] ERROR o.s.boot.SpringApplication
+                – Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.jdbc.datasource.init.UncategorizedScriptException: Failed to execute database script; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is org.postgresql.util.PSQLException: �����: ������������ "postgres" �� ������ �������� ����������� (�� ������)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at com.example.demo21.Task21Application.main(Task21Application.java:10)
+Caused by: org.springframework.jdbc.datasource.init.UncategorizedScriptException: Failed to execute database script; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is org.postgresql.util.PSQLException: �����: ������������ "postgres" �� ������ �������� ����������� (�� ������)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:67)
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:90)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:145)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:107)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applySchemaScripts(AbstractScriptDatabaseInitializer.java:97)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:75)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:65)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 18 common frames omitted
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is org.postgresql.util.PSQLException: �����: ������������ "postgres" �� ������ �������� ����������� (�� ������)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:83)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:52)
+	... 26 common frames omitted
+Caused by: org.postgresql.util.PSQLException: �����: ������������ "postgres" �� ������ �������� ����������� (�� ������)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:646)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:180)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:400)
+	at org.postgresql.Driver.connect(Driver.java:259)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:159)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:117)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+	... 27 common frames omitted
+885  [background-preinit] INFO  o.h.validator.internal.util.Version
+                – HV000001: Hibernate Validator 6.2.3.Final
+883  [main] INFO  c.example.demo21.Task21Application
+                – Starting Task21Application using Java 11.0.2 on DESKTOP-9LAEEI3 with PID 22244 (C:\Users\sslot\IdeaProjects\JavaSecondMirea\task21\target\classes started by sslot in C:\Users\sslot\IdeaProjects\JavaSecondMirea\task21)
+887  [main] INFO  c.example.demo21.Task21Application
+                – No active profile set, falling back to 1 default profile: "default"
+1802 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+1879 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                – Finished Spring Data repository scanning in 63 ms. Found 2 JPA repository interfaces.
+2752 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                – Tomcat initialized with port(s): 8080 (http)
+2758 [main] INFO  o.a.coyote.http11.Http11NioProtocol
+                – Initializing ProtocolHandler ["http-nio-8080"]
+2758 [main] INFO  o.a.catalina.core.StandardService
+                – Starting service [Tomcat]
+2758 [main] INFO  o.a.catalina.core.StandardEngine
+                – Starting Servlet engine: [Apache Tomcat/9.0.60]
+2866 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+                – Initializing Spring embedded WebApplicationContext
+2866 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext
+                – Root WebApplicationContext: initialization completed in 1924 ms
+3111 [main] INFO  o.h.jpa.internal.util.LogHelper
+                – HHH000204: Processing PersistenceUnitInfo [name: default]
+3158 [main] INFO  org.hibernate.Version
+                – HHH000412: Hibernate ORM core version 5.6.7.Final
+3299 [main] INFO  o.h.annotations.common.Version
+                – HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+3381 [main] INFO  com.zaxxer.hikari.HikariDataSource
+                – HikariPool-1 - Starting...
+3492 [main] INFO  com.zaxxer.hikari.pool.HikariPool
+                – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@754de353
+3494 [main] INFO  com.zaxxer.hikari.HikariDataSource
+                – HikariPool-1 - Start completed.
+3506 [main] INFO  org.hibernate.dialect.Dialect
+                – HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+4200 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator
+                – HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+4214 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
+                – Initialized JPA EntityManagerFactory for persistence unit 'default'
+4666 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration
+                – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+4895 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration
+                – Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+5114 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver
+                – Exposing 1 endpoint(s) beneath base path '/actuator'
+5143 [main] INFO  o.a.coyote.http11.Http11NioProtocol
+                – Starting ProtocolHandler ["http-nio-8080"]
+5160 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                – Tomcat started on port(s): 8080 (http) with context path ''
+5174 [main] INFO  c.example.demo21.Task21Application
+                – Started Task21Application in 4.77 seconds (JVM running for 6.323)
+6193 [RMI TCP Connection(3)-192.168.56.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+                – Initializing Spring DispatcherServlet 'dispatcherServlet'
+6194 [RMI TCP Connection(3)-192.168.56.1] INFO  o.s.web.servlet.DispatcherServlet
+                – Initializing Servlet 'dispatcherServlet'
+6196 [RMI TCP Connection(3)-192.168.56.1] INFO  o.s.web.servlet.DispatcherServlet
+                – Completed initialization in 1 ms
+6789 [RMI TCP Connection(2)-192.168.56.1] WARN  o.s.b.a.mail.MailHealthIndicator
+                – Mail health check failed
+javax.mail.AuthenticationFailedException: 535 5.7.8 Error: authentication failed: This user does not have access rights to this service 1653630103-IoL0SVBLZ0-fhbmVUxL
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762)
+	at javax.mail.Service.connect(Service.java:342)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.testConnection(JavaMailSenderImpl.java:398)
+	at org.springframework.boot.actuate.mail.MailHealthIndicator.doHealthCheck(MailHealthIndicator.java:42)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:77)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:40)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:130)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:141)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:126)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:95)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:66)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:71)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:122)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:97)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:809)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1466)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1307)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1399)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:827)
+	at java.base/jdk.internal.reflect.GeneratedMethodAccessor71.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+566323 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
+                – Closing JPA EntityManagerFactory for persistence unit 'default'
+566325 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource
+                – HikariPool-1 - Shutdown initiated...
+566332 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource
+                – HikariPool-1 - Shutdown completed.
+649  [background-preinit] INFO  o.h.validator.internal.util.Version
+                – HV000001: Hibernate Validator 6.2.3.Final
+649  [main] INFO  c.example.demo21.Task21Application
+                – Starting Task21Application using Java 11.0.2 on DESKTOP-9LAEEI3 with PID 15944 (C:\Users\sslot\IdeaProjects\JavaSecondMirea\task21\target\classes started by sslot in C:\Users\sslot\IdeaProjects\JavaSecondMirea\task21)
+652  [main] INFO  c.example.demo21.Task21Application
+                – No active profile set, falling back to 1 default profile: "default"
+1145 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+1185 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate
+                – Finished Spring Data repository scanning in 33 ms. Found 2 JPA repository interfaces.
+1797 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                – Tomcat initialized with port(s): 8080 (http)
+1803 [main] INFO  o.a.coyote.http11.Http11NioProtocol
+                – Initializing ProtocolHandler ["http-nio-8080"]
+1803 [main] INFO  o.a.catalina.core.StandardService
+                – Starting service [Tomcat]
+1803 [main] INFO  o.a.catalina.core.StandardEngine
+                – Starting Servlet engine: [Apache Tomcat/9.0.60]
+1906 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+                – Initializing Spring embedded WebApplicationContext
+1906 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext
+                – Root WebApplicationContext: initialization completed in 1218 ms
+2088 [main] INFO  o.h.jpa.internal.util.LogHelper
+                – HHH000204: Processing PersistenceUnitInfo [name: default]
+2125 [main] INFO  org.hibernate.Version
+                – HHH000412: Hibernate ORM core version 5.6.7.Final
+2229 [main] INFO  o.h.annotations.common.Version
+                – HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2308 [main] INFO  com.zaxxer.hikari.HikariDataSource
+                – HikariPool-1 - Starting...
+2416 [main] INFO  com.zaxxer.hikari.pool.HikariPool
+                – HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4c5f7b4f
+2418 [main] INFO  com.zaxxer.hikari.HikariDataSource
+                – HikariPool-1 - Start completed.
+2429 [main] INFO  org.hibernate.dialect.Dialect
+                – HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+3015 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator
+                – HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+3025 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
+                – Initialized JPA EntityManagerFactory for persistence unit 'default'
+3463 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration
+                – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+3654 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration
+                – Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+3855 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver
+                – Exposing 1 endpoint(s) beneath base path '/actuator'
+3880 [main] INFO  o.a.coyote.http11.Http11NioProtocol
+                – Starting ProtocolHandler ["http-nio-8080"]
+3893 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer
+                – Tomcat started on port(s): 8080 (http) with context path ''
+3907 [main] INFO  c.example.demo21.Task21Application
+                – Started Task21Application in 3.611 seconds (JVM running for 4.743)
+4662 [RMI TCP Connection(3)-192.168.56.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]
+                – Initializing Spring DispatcherServlet 'dispatcherServlet'
+4662 [RMI TCP Connection(3)-192.168.56.1] INFO  o.s.web.servlet.DispatcherServlet
+                – Initializing Servlet 'dispatcherServlet'
+4663 [RMI TCP Connection(3)-192.168.56.1] INFO  o.s.web.servlet.DispatcherServlet
+                – Completed initialization in 1 ms
+4720 [RMI TCP Connection(2)-192.168.56.1] WARN  o.s.b.a.mail.MailHealthIndicator
+                – Mail health check failed
+com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.mail.tm, 465; timeout -1
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2210)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:722)
+	at javax.mail.Service.connect(Service.java:342)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.testConnection(JavaMailSenderImpl.java:398)
+	at org.springframework.boot.actuate.mail.MailHealthIndicator.doHealthCheck(MailHealthIndicator.java:42)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:77)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:40)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:130)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:141)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:126)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:95)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:66)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:71)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:122)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:97)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:809)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1466)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1307)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1399)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:827)
+	at java.base/jdk.internal.reflect.GeneratedMethodAccessor69.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:359)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:562)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:796)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:677)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:676)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.net.UnknownHostException: smtp.mail.tm
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:220)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
+	at java.base/java.net.Socket.connect(Socket.java:591)
+	at java.base/java.net.Socket.connect(Socket.java:540)
+	at com.sun.mail.util.SocketFetcher.createSocket(SocketFetcher.java:335)
+	at com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:214)
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2160)
+	... 47 common frames omitted
+14694 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean
+                – Closing JPA EntityManagerFactory for persistence unit 'default'
+14696 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource
+                – HikariPool-1 - Shutdown initiated...
+14703 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource
+                – HikariPool-1 - Shutdown completed.

@@ -39,7 +39,7 @@ public class MyController {
 
         Game game = new Game(name, creationDate);
 
-        if (gameRepository.find(game) >= 0) {
+        if (gameRepository.find(game) != 0) {
             return "game with name " + name + " and creation date " + creationDate + " is available";
         }
 
